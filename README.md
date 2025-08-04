@@ -66,3 +66,6 @@ And if you extract it on the internal/memory card, it might not be possible to e
 Sorry if my words are very confusing, I used Google Translate to write this
 
 I hope this help you :)
+
+Thanks To
+- danielmmmm for the python script
