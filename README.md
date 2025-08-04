@@ -16,10 +16,15 @@ git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconve
 4. Put the file
 
 system.new.dat.br
+
 system.patch.dat
+
 system.transfer.list
+
 vendor.new.dat.br
+
 vendor.patch.dat
+
 vendor.transfer.list
 
    into this folder (newdatbrconverter)
