@@ -1,63 +1,45 @@
-# newdatbrconverter
 How To Convert system.new.dat.br to system.img (or vendor file) on Termux Android No Root Needed
 
-This only to convert new.dat.br to new.dat to .img
-For the other way around, sorry I don't know
+This only to convert new.dat.br to new.dat to .img For the other way around, sorry I don't know
 
 #Step
 
 1. Install git & brotli package
-   Command: pkg install git && pkg install brotli
+Command: pkg install git && pkg install brotli
 
-2. Download this repo
-
+2. Clone this repo
 git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconverter
 
-4. Put the file
-
+Put the file:
 system.new.dat.br
-
 system.patch.dat
-
 system.transfer.list
-
 vendor.new.dat.br
-
 vendor.patch.dat
-
 vendor.transfer.list
+into this folder (newdatbrconverter)
 
-   into this folder (newdatbrconverter)
-
-5. Convert system.new.dat.br to system.new.dat
-
+3. Convert system.new.dat.br to system.new.dat
 Command: brotli --decompress system.new.dat.br -o system.new.dat
 
-Before: system.new.dat.br (500Mb)
-After/Result: system.new.dat (1,5Gb)
+Before: system.new.dat.br (500Mb) After/Result: system.new.dat (1,5Gb)
 
-7. Convert vendor.new.dat.br to vendor.new.dat
-
+4. Convert vendor.new.dat.br to vendor.new.dat
 Command: brotli --decompress vendor.new.dat.br -o vendor.new.dat
 
 Before: vendor.new.dat.br (100Mb)
-
 After/Result: vendor.new.dat (300Mb)
 
-9. Convert system.new.dat to system.img
-    
+5. Convert system.new.dat to system.img
 Command: python sdat2img.py system.transfer.list system.new.dat system.img
 
 Before: system.new.dat (1,5Gb)
-
 After/Result: system.img (3Gb)
 
-11. Convert vendor.new.dat to vendor.img
-    
+6. Convert vendor.new.dat to vendor.img
 Command: python sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
 
 Before: vendor.new.dat (300Mb)
-
 After/Result: vendor.img (500Mb)
 
 #Done
@@ -66,12 +48,10 @@ The main thing is, We first change system.new.dat.br to system.new.dat and then 
 
 Example estimated file size (I decompressed system.new.dat.br and vendor.new.dat.br in nusantara rimuru rom for rolex device/Redmi 4A)
 
-System.new.dat.br: 500Mb
-System.new.dat: 1,5Gb
+System.new.dat.br: 500Mb System.new.dat: 1,5Gb
 System.img: 3Gb
 
-Vendor.new.dat.br: 100Mb
-Vendor.new.dat: 300Mb
+Vendor.new.dat.br: 100Mb Vendor.new.dat: 300Mb
 Vendor.img: 500Mb
 
 So we can conclude that system/vendor.new.dat.br is system.img compressed/encrypted several times.
@@ -89,4 +69,4 @@ Sorry if my words are very confusing, I used Google Translate to write this
 I hope this help you :)
 
 Thanks To
-- danielmmmm for the python script
+-danielmmmm for the python script
