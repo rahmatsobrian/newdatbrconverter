@@ -15,13 +15,13 @@ git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconve
 
 4. Put the file
 
-   system.new.dat.br
-   system.patch.dat
-   system.transfer.list
-   vendor.new.dat.br
-   vendor.patch.dat
-   vendor.transfer.list
-   
+system.new.dat.br
+system.patch.dat
+system.transfer.list
+vendor.new.dat.br
+vendor.patch.dat
+vendor.transfer.list
+
    into this folder (newdatbrconverter)
 
 5. Convert system.new.dat.br to system.new.dat
