@@ -4,6 +4,8 @@ How To Convert system.new.dat.br to system.img (or vendor file) on Termux Androi
 This only to convert new.dat.br to new.dat to .img
 For the other way around, sorry I don't know
 
+#Step
+
 1. Install git & brotli package
    Command: pkg install git && pkg install brotli
 
@@ -23,24 +25,37 @@ git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconve
    into this folder (newdatbrconverter)
 
 5. Convert system.new.dat.br to system.new.dat
+
 Command: brotli --decompress system.new.dat.br -o system.new.dat
+
 Before: system.new.dat.br (500Mb)
 After/Result: system.new.dat (1,5Gb)
 
-6. Convert vendor.new.dat.br to vendor.new.dat
+7. Convert vendor.new.dat.br to vendor.new.dat
+
 Command: brotli --decompress vendor.new.dat.br -o vendor.new.dat
+
 Before: vendor.new.dat.br (100Mb)
+
 After/Result: vendor.new.dat (300Mb)
 
-7. Convert system.new.dat to system.img
+9. Convert system.new.dat to system.img
+    
 Command: python sdat2img.py system.transfer.list system.new.dat system.img
+
 Before: system.new.dat (1,5Gb)
+
 After/Result: system.img (3Gb)
 
-8. Convert vendor.new.dat to vendor.img
+11. Convert vendor.new.dat to vendor.img
+    
 Command: python sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
+
 Before: vendor.new.dat (300Mb)
+
 After/Result: vendor.img (500Mb)
+
+#Done
 
 The main thing is, We first change system.new.dat.br to system.new.dat and then lastly we change it to system.img, same for vendor file
 
