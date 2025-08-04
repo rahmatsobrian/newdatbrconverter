@@ -8,33 +8,35 @@ For the other way around, sorry I don't know
    Command: pkg install git && pkg install brotli
 
 2. Download this repo
-   git clone cd newdatbrconverter
+   git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconverter
 
-3. put the file
+3. Put the file
+
    system.new.dat.br
    system.patch.dat
    system.transfer.list
    vendor.new.dat.br
    vendor.patch.dat
    vendor.transfer.list
+   
    into this folder (newdatbrconverter)
 
-4. Convert system.new.dat.br to system.new.dat
+5. Convert system.new.dat.br to system.new.dat
 Command: brotli --decompress system.new.dat.br -o system.new.dat
 Before: system.new.dat.br (500Mb)
 After/Result: system.new.dat (1,5Gb)
 
-5. Convert vendor.new.dat.br to vendor.new.dat
+6. Convert vendor.new.dat.br to vendor.new.dat
 Command: brotli --decompress vendor.new.dat.br -o vendor.new.dat
 Before: vendor.new.dat.br (100Mb)
 After/Result: vendor.new.dat (300Mb)
 
-6. Convert system.new.dat to system.img
+7. Convert system.new.dat to system.img
 Command: python sdat2img.py system.transfer.list system.new.dat system.img
 Before: system.new.dat (1,5Gb)
 After/Result: system.img (3Gb)
 
-7. Convert vendor.new.dat to vendor.img
+8. Convert vendor.new.dat to vendor.img
 Command: python sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
 Before: vendor.new.dat (300Mb)
 After/Result: vendor.img (500Mb)
@@ -54,8 +56,11 @@ Vendor.img: 500Mb
 So we can conclude that system/vendor.new.dat.br is system.img compressed/encrypted several times.
 
 If you done, you can extract the .img file with ZArchiver app
+
 Note: if you non root, maybe There are some files that cannot be extracted because they are symbolic link files, so they are just shortcuts. On a rooted phone, I forgot whether it was fully functional or not.
+
 But one thing I know, if you extract the system.img / vendor.img file in the termux directory (By using the img extractor script), all files will be successfully extracted, including the symbolic link file, But if you use ZArchiver, it still won't be able to extract everything, even if you extract it to the Termux folder.
+
 And if you extract it on the internal/memory card, it might not be possible to extract everything like a symbolic link.
 
 Sorry if my words are very confusing, I used Google Translate to write this
