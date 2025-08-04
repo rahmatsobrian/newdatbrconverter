@@ -8,9 +8,10 @@ For the other way around, sorry I don't know
    Command: pkg install git && pkg install brotli
 
 2. Download this repo
-   git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconverter
 
-3. Put the file
+git clone https://github.com/rahmatsobrian/newdatbrconverter && cd newdatbrconverter
+
+4. Put the file
 
    system.new.dat.br
    system.patch.dat
